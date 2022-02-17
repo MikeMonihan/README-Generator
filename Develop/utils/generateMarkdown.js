@@ -1,4 +1,3 @@
-
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -34,7 +33,7 @@ function generateMarkdown(userAnswer) {
   * [Usage](#usage)` };
 
   if (userAnswer.contrib !== null) { genToC += `
-  * [Contributing](#contributing)` };
+  * [Contributions](#contributions)` };
 
   if (userAnswer.license !== null) { genToC += `
   * [License](#license)` };
@@ -54,13 +53,15 @@ function generateMarkdown(userAnswer) {
   `
   
   ## Installation
-  
+
+  *Dependencies needed to before running the project*
   
   ${userAnswer.installInfo}
   
   
   ## Usage 
   
+  *How to use the application*
   
   ${userAnswer.usageInfo}
 
@@ -72,8 +73,9 @@ function generateMarkdown(userAnswer) {
     
   `
   
-  ## Contributing
+  ## Contributions
   
+  *Guidelines on how to contribute*
   
   ${userAnswer.contrib}`
   };
@@ -86,8 +88,37 @@ function generateMarkdown(userAnswer) {
   
   ## Tests
   
+  *Application tests and how to use them*
   
   ${userAnswer.testInst}`
+  };
+
+  if (userAnswer.gitHubUser !== null) {
+  
+  readDraft += 
+
+  `
+
+  ## Questions - Github
+  
+  For any questions, connect with me through my Github: 
+  
+  https://github.com/${userAnswer.gitHubUser}
+  `
+  };
+
+  if (userAnswer.email !== null) {
+  
+   readDraft += 
+  
+  `
+  
+  ## Questions - Email
+    
+  Or please contact me through my email:
+  
+  [${userAnswer.email}](mailto:${userAnswer.email})
+  `
   };
 
 
