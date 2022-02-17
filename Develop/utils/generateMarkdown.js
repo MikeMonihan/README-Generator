@@ -1,22 +1,75 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+var badgeImg;
+var lsLink;
+
 function renderLicenseBadge(license) {
-  //var 
+  let codeLS = license;
+  
+  switch(codeLS){
+    case "GNU AGPLv3":
+    badgeImg = "https://img.shields.io/badge/License-AGPL_v3-blue.svg";
+    break;
+    case "GNU GPLv3":
+    badgeImg = "https://img.shields.io/badge/License-GPLv3-blue.svg";
+    break;
+    case "GNU LGPLv3":
+    badgeImg = "https://img.shields.io/badge/License-LGPL_v3-blue.svg";
+    break;
+    case "Mozilla Public License 2.0":
+    badgeImg = "https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg";
+    break;
+    case "Apache License 2.0":
+    badgeImg = "https://img.shields.io/badge/License-Apache_2.0-blue.svg";
+    break;
+    case "MIT License":
+    badgeImg = "https://img.shields.io/badge/License-MIT-yellow.svg";
+    break;
+    case "Boost Software License 1.0":
+    badgeImg = "https://img.shields.io/badge/License-Boost_1.0-lightblue.svg";
+    break;
+    case "The Unlicense":
+    badgeImg = "https://img.shields.io/badge/license-Unlicense-blue.svg";
+    break;
+    default:
+    badgeImg = "";
+    break;
+
+  }
 
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
+  let codeLS = license;
+  
+  switch(codeLS){
+    case "GNU AGPLv3":
+    lsLink = "https://www.gnu.org/licenses/agpl-3.0";
+    break;
+    case "GNU GPLv3":
+    lsLink = "https://www.gnu.org/licenses/gpl-3.0";
+    break;
+    case "GNU LGPLv3":
+    lsLink = "https://www.gnu.org/licenses/lgpl-3.0";
+    break;
+    case "Mozilla Public License 2.0":
+    lsLink = "https://opensource.org/licenses/MPL-2.0";
+    break;
+    case "Apache License 2.0":
+    lsLink = "https://opensource.org/licenses/Apache-2.0";
+    break;
+    case "MIT License":
+    lsLink = "https://opensource.org/licenses/MIT";
+    break;
+    case "Boost Software License 1.0":
+    lsLink = "https://www.boost.org/LICENSE_1_0.txt";
+    break;
+    case "The Unlicense":
+    lsLink = "https://unlicense.org";
+    break;
+    default:
+    lsLink = "";
+    break;
 
-
-
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-
+  }
 
 
 }
@@ -121,15 +174,19 @@ function generateMarkdown(userAnswer) {
   `
   };
 
+  renderLicenseBadge(userAnswer.license);
+  renderLicenseLink(userAnswer.license);
 
   readDraft +=
   `
   
   ## License
   
-  ${userAnswer.license}
+  ![${userAnswer.license}](${badgeImg})
+  ${lsLink}
+  
   `;
-
+  
 
   return readDraft;
   

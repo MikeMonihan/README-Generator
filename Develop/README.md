@@ -1,21 +1,9 @@
-# README Generator 
+# Hello world project 
   
   
   ## Description 
   
-  This application allows a user to automatically create README files for projects by implementing the package inquirer to ask the user questions and write them to a file. 
-
-  ## Video 
-
-  **Please make sure your volume is at atleast 75% as my recorded audio was very quiet, sorry for the inconvenience.**
-
-  [Walkthrough Video](https://www.youtube.com/watch?v=NwVc7bFz1rA)
-
-
-  ## Links 
-
-  [Live github repo link](https://github.com/MikeMonihan/README-Generator)
-
+  This project writes the text "hello world" into the console log and then writes to a file.
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -26,14 +14,14 @@
 
   *Dependencies needed to before running the project*
   
-  npm i inquirer, fs 
+  npm i fs
   
   
   ## Usage 
   
   *How to use the application*
   
-  node index.js 
+  node index.js
 
   
   
@@ -41,26 +29,26 @@
   
   *Guidelines on how to contribute*
   
-  Contribute at your hearts content 
+  Feel free to contribute 
   
   ## Tests
   
   *Application tests and how to use them*
   
-  None
+  none
 
   ## Questions - Github
   
   For any questions, connect with me through my Github: 
   
-  https://github.com/MiekShreds
+  https://github.com/miekshreds
   
   
   ## Questions - Email
     
   Or please contact me through my email:
   
-  [mrmonihan@hotmail.com](mailto:mrmonihan@hotmail.com)
+  [gmail@gmail.com](mailto:gmail@gmail.com)
   
   
   ## License

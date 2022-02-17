@@ -29,50 +29,9 @@ const questions = [
 },
 {
     type: 'list',
-    name: 'license',
-    message: 'Enter the license used: ',
-    choices: [
-    {
-        key:'0',
-        name: 'GNU AGPLv3',
-        message: 'GNU AGPLv3',
-    },
-    {
-        key:'1',
-        name: 'GNU GPLv3',
-        message: 'GNU GPLv3',
-    },
-    {
-        key:'2',
-        name: 'GNU LGPLv3',
-        message: 'GNU LGPLv3',
-    },
-    {
-        key:'3',
-        name: 'Mozilla Public License 2.0',
-        message: 'Mozilla Public License 2.0',
-    },
-    {
-        key:'4',
-        name: 'Apache License 2.0',
-        message: 'Apache License 2.0',
-    },
-    {
-        key:'5',
-        name: 'MIT License',
-        message: 'MIT License',
-    },
-    {
-        key:'6',
-        name: 'Boost Software License 1.0',
-        message: 'Boost Software License 1.0',
-    },
-    {
-        key:'7',
-        name: 'The Unlicense',
-        message: 'The Unlicense',
-    },
-    ],
+        message: "Enter the license used for your project.",
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        name: 'license',
 },
 {
     type: 'input',
@@ -96,7 +55,6 @@ const questions = [
 },
 ];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     
     fs.writeFile(fileName, data, err => {
@@ -109,7 +67,6 @@ function writeToFile(fileName, data) {
     
 }
 
-// TODO: Create a function to initialize app
 async function init() {
     try {
     
@@ -124,6 +81,5 @@ async function init() {
     }
 };
 
-// Function call to initialize app
 init();
 
